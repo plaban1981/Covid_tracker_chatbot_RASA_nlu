@@ -1,0 +1,45 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- search_restaurant
+- corona_tracker
+- corona_stats
+entities:
+- state
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  action_search_restaurant:
+  - custom: action_search_restaurant
+  utter_corona_bot:
+  - text: 'Corona Statistics Inferred (Courtesy :covid19india.org) Please enter the
+      state name '
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_corona_bot
+- action_search_restaurant
+- action_corona_tracker
